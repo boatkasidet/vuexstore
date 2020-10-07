@@ -2,16 +2,9 @@
   <v-app dark>
     <v-app-bar color="orange" :clipped-left="clipped" fixed app dense>
       <v-toolbar-title v-text="title" />
-      <template v-slot:extension>
-        <v-tab
-          v-for="(item, i) in items"
-          :key="i"
-          align-with-title
-          :to="item.to"
-          router
-          exact
-        >
-          <v-tab v-icon="item.icon" v-text="item.title"></v-tab>
+      <template>
+        <v-tab v-for="(item, i) in items" :key="i" :to="item.to" router exact>
+          <v-tabs v-text="item.title"></v-tabs>
         </v-tab>
       </template>
     </v-app-bar>
