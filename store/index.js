@@ -7,43 +7,24 @@ export const state = () => ({
       value: 'name',
     },
     { text: 'Phone', value: 'Phone' },
-    { text: 'Espresso', value: 'Espresso' },
-    { text: 'Americano', value: 'Americano' },
-    { text: 'Latte', value: 'Latte' },
-    { text: 'Cappuccino', value: 'Cappuccino' },
-    { text: 'Mocha', value: 'Mocha' },
-    { text: 'Macchiato', value: 'Macchiato' },
-    { text: 'Frappe', value: 'Frappe' },
-    { text: 'Affogato', value: 'Affogato' },
+    { text: 'Phone', value: 'Phone' },
+    { text: 'Espresso', value: 'Es' },
+    { text: 'Americano', value: 'Am' },
+    { text: 'Latte', value: 'La' },
+    { text: 'Cappuccino', value: 'Ca' },
+    { text: 'Mocha', value: 'Mo' },
   ],
 })
 export const mutations = {
-  input(
-    state,
-    {
-      name,
-      Phone,
-      Espresso,
-      Americano,
-      Latte,
-      Cappuccino,
-      Mocha,
-      Macchiato,
-      Frappe,
-      Affogato,
-    }
-  ) {
+  input(state, { name, Phone, Es, Am, La, Ca, Mo }) {
     state.data.push({
       name,
       Phone,
-      Espresso,
-      Americano,
-      Latte,
-      Cappuccino,
-      Mocha,
-      Macchiato,
-      Frappe,
-      Affogato,
+      Es,
+      Am,
+      La,
+      Ca,
+      Mo,
     })
   },
 }

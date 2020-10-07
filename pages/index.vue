@@ -3,98 +3,47 @@
     <v-container>
       <v-row>
         <v-col cols="5" md="4">
-          <v-text-field v-model="name" :counter="12" label="Name" required />
+          <h4>Name</h4>
+          <v-text-field v-model="name" :counter="12" required />
         </v-col>
         <v-col cols="5" md="4">
-          <v-text-field v-model="Phone" :counter="10" label="Phone" required />
+          <h4>Phone</h4>
+          <v-text-field v-model="Phone" :counter="10" required />
         </v-col>
       </v-row>
       <v-row>
         <v-col cols="5" md="3"> Espresso (เอสเพรสโซ่) </v-col>
         <v-col cols="5" md="2">
-          <v-text-field
-            v-model="Espresso"
-            :counter="2"
-            label="Quantity"
-            required
-          />
+          <h4>Quantity</h4>
+          <v-text-field v-model="Es" :counter="2" required />
         </v-col>
       </v-row>
       <v-row>
         <v-col cols="5" md="3"> Americano (อเมริกาโน่) </v-col>
         <v-col cols="5" md="2">
-          <v-text-field
-            v-model="Americano"
-            :counter="2"
-            label="Quantity"
-            required
-          />
+          <h4>Quantity</h4>
+          <v-text-field v-model="Am" :counter="2" required />
         </v-col>
       </v-row>
       <v-row>
         <v-col cols="5" md="3"> Latte (ลาเต้) </v-col>
         <v-col cols="5" md="2">
-          <v-text-field
-            v-model="Latte"
-            :counter="2"
-            label="Quantity"
-            required
-          />
+          <h4>Quantity</h4>
+          <v-text-field v-model="La" required />
         </v-col>
       </v-row>
       <v-row>
         <v-col cols="5" md="3"> Cappuccino (คาปูชิโน) </v-col>
         <v-col cols="5" md="2">
-          <v-text-field
-            v-model="Cappuccino"
-            :counter="2"
-            label="Quantity"
-            required
-          />
+          <h4>Quantity</h4>
+          <v-text-field v-model="Ca" :counter="2" required />
         </v-col>
       </v-row>
       <v-row>
         <v-col cols="5" md="3"> Mocha (มอคค่า) </v-col>
         <v-col cols="5" md="2">
-          <v-text-field
-            v-model="Mocha"
-            :counter="2"
-            label="Quantity"
-            required
-          />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="5" md="3"> Macchiato (มัคคิอาโต้) </v-col>
-        <v-col cols="5" md="2">
-          <v-text-field
-            v-model="Macchiato"
-            :counter="2"
-            label="Quantity"
-            required
-          />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="5" md="3"> Frappe (เฟร้บเป้) </v-col>
-        <v-col cols="5" md="2">
-          <v-text-field
-            v-model="Frappe"
-            :counter="2"
-            label="Quantity"
-            required
-          />
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="5" md="3"> Affogato (อัฟโฟกาโต) </v-col>
-        <v-col cols="5" md="2">
-          <v-text-field
-            v-model="Affogato"
-            :counter="2"
-            label="Quantity"
-            required
-          />
+          <h4>Quantity</h4>
+          <v-text-field v-model="Mo" :counter="2" required />
         </v-col>
       </v-row>
     </v-container>
@@ -108,7 +57,12 @@ export default {
   data() {
     return {
       name: '',
-      lastname: '',
+      Phone: '',
+      Es: '',
+      Am: '',
+      La: '',
+      Ca: '',
+      Mo: '',
     }
   },
   computed: {
@@ -118,25 +72,19 @@ export default {
     validate() {
       const name = this.name
       const Phone = this.Phone
-      const Espresso = this.Espresso
-      const Americano = this.Americano
-      const Latte = this.Latte
-      const Cappuccino = this.Cappuccino
-      const Mocha = this.Mocha
-      const Macchiato = this.Macchiato
-      const Frappe = this.Frappe
-      const Affogato = this.Affogato
+      const Es = this.Es
+      const Am = this.Am
+      const La = this.La
+      const Ca = this.Ca
+      const Mo = this.Mo
       this.$store.commit('input', {
         name,
         Phone,
-        Espresso,
-        Americano,
-        Latte,
-        Cappuccino,
-        Mocha,
-        Macchiato,
-        Frappe,
-        Affogato,
+        Es,
+        Am,
+        La,
+        Ca,
+        Mo,
       })
     },
   },

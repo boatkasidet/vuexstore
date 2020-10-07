@@ -12,7 +12,7 @@ export default {
     link: [
       {
         rel: 'icon',
-        type: 'image/x-icon',
+        type: 'image',
         href: 'https://www.flaticon.com/svg/static/icons/svg/1588/1588946.svg',
       },
     ],
